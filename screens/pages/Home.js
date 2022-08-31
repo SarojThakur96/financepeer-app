@@ -9,15 +9,11 @@ import {
 } from 'react-native-heroicons/solid';
 import Landing from './Landing';
 import ImageUpload from './ImageUpload';
-import Logger from './Logger';
 import Calculator from './Calculator';
-import {authContext} from '../../context/authContext';
+import Location from './Location';
 export const Tab = createMaterialBottomTabNavigator();
 
 const Home = () => {
-  // const {user, setUser} = useContext(authContext);
-  // console.log(user);
-
   return (
     <Tab.Navigator
       screenOptions={{}}
@@ -36,14 +32,14 @@ const Home = () => {
       />
       <Tab.Screen
         component={ImageUpload}
-        name="CAPTURE"
+        name="PHOTO"
         options={{
           tabBarIcon: ({color}) => <UploadIcon color={color} size={25} />,
         }}
       />
       <Tab.Screen
-        component={Logger}
-        name="LOGGER"
+        component={Location}
+        name="LOCATION"
         options={{
           tabBarIcon: ({color}) => <DocumentTextIcon color={color} size={25} />,
         }}
