@@ -13,8 +13,6 @@ import {AuthProvider} from './context/authContext';
 import Routes from './screens/Routes';
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-
   React.useEffect(() => {
     SplashScreen.hide();
   });

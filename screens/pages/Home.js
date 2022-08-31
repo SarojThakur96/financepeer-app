@@ -36,7 +36,7 @@ const Home = () => {
       />
       <Tab.Screen
         component={ImageUpload}
-        name="UPLOAD"
+        name="CAPTURE"
         options={{
           tabBarIcon: ({color}) => <UploadIcon color={color} size={25} />,
         }}
@@ -51,6 +51,13 @@ const Home = () => {
       <Tab.Screen
         component={Calculator}
         name="CALCULATOR"
+        options={{
+          tabBarIcon: ({color}) => <CalculatorIcon color={color} size={25} />,
+        }}
+      />
+      <Tab.Screen
+        component={Calculator}
+        name="Account"
         options={{
           tabBarIcon: ({color}) => <CalculatorIcon color={color} size={25} />,
         }}
