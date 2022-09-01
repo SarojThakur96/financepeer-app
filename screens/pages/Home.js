@@ -9,8 +9,8 @@ import {
 } from 'react-native-heroicons/solid';
 import Landing from './Landing';
 import ImageUpload from './ImageUpload';
-import Calculator from './Calculator';
 import Location from './Location';
+import JsonData from './JsonData';
 export const Tab = createMaterialBottomTabNavigator();
 
 const Home = () => {
@@ -45,15 +45,15 @@ const Home = () => {
         }}
       />
       <Tab.Screen
-        component={Calculator}
-        name="CALCULATOR"
+        component={JsonData}
+        name="JSON DATA"
         options={{
           tabBarIcon: ({color}) => <CalculatorIcon color={color} size={25} />,
         }}
       />
       <Tab.Screen
-        component={Calculator}
-        name="Account"
+        component={ApiData}
+        name="API Data"
         options={{
           tabBarIcon: ({color}) => <CalculatorIcon color={color} size={25} />,
         }}
