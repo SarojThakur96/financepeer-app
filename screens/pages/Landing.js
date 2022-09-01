@@ -4,11 +4,13 @@ import {
   View,
   TouchableOpacity,
   ImageBackground,
+  Image,
 } from 'react-native';
 import React from 'react';
 import {BellIcon} from 'react-native-heroicons/solid';
 import Header from '../../components/Header';
 import ImageSlider from 'react-native-image-slider';
+import {TouchableHighlight} from 'react-native-gesture-handler';
 
 const Landing = () => {
   const images = [
@@ -20,13 +22,16 @@ const Landing = () => {
 
   return (
     <View style={{flex: 1}}>
-      <Header />
       <ImageBackground
-        source={{uri: 'https://reactjs.org/logo-og.png'}}
+        source={{
+          uri:
+            'https://images.pexels.com/photos/1156684/pexels-photo-1156684.jpeg?cs=srgb&dl=pexels-arun-thomas-1156684.jpg&fm=jpg',
+        }}
         resizeMode="cover"
-        style={{flex: 1, justifyContent: 'center'}}
+        style={{flex: 1}}
       >
-        <ImageSlider
+        <Header />
+        {/* <ImageSlider
           loopBothSides
           autoPlayWithInterval={3000}
           images={images}
@@ -54,7 +59,7 @@ const Landing = () => {
               })}
             </View>
           )}
-        />
+        /> */}
       </ImageBackground>
     </View>
   );

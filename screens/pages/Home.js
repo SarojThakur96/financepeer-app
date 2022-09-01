@@ -11,6 +11,7 @@ import Landing from './Landing';
 import ImageUpload from './ImageUpload';
 import Location from './Location';
 import JsonData from './JsonData';
+import ApiData from './ApiData';
 export const Tab = createMaterialBottomTabNavigator();
 
 const Home = () => {
@@ -22,7 +23,8 @@ const Home = () => {
         backgroundColor: '#000',
       }}
       activeColor="#fff"
-      inactiveColor="#828282">
+      inactiveColor="#828282"
+    >
       <Tab.Screen
         component={Landing}
         name="HOME"

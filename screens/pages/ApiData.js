@@ -13,18 +13,22 @@ const ApiData = () => {
       'https://www.randomnumberapi.com/api/v1.0/random?min=100&max=1000&count=400',
     )
       .then(res => res.json())
-      .then(data => console.log(data));
-
-    setLoading(false);
+      .then(data => setLoading(false));
   };
 
   return (
-    <>
+    <View style={{backgroundColor: '#ffffff', flex: 1}}>
       <Header />
       {!!loading ? (
         <Image
           source={require('../../assets/images/Spinner.gif')}
-          style={{width: 400, height: 400, resizeMode: 'contain'}}
+          style={{
+            width: 120,
+            height: 120,
+            resizeMode: 'contain',
+            alignSelf: 'center',
+            marginVertical: 200,
+          }}
         />
       ) : (
         <View
@@ -33,13 +37,14 @@ const ApiData = () => {
             paddingHorizontal: 10,
             paddingVertical: 10,
             justifyContent: 'flex-end',
-          }}>
+          }}
+        >
           <Button mode="contained" color="#000" onPress={callData}>
             Call API
           </Button>
         </View>
       )}
-    </>
+    </View>
   );
 };
 
