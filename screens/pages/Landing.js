@@ -1,38 +1,35 @@
 import {
   StyleSheet,
-  Text,
   View,
-  TouchableOpacity,
   ImageBackground,
   Image,
   FlatList,
   useWindowDimensions,
   Animated,
 } from 'react-native';
-import React, {useState, useRef} from 'react';
-import {BellIcon} from 'react-native-heroicons/solid';
+import React, {useRef} from 'react';
 import Header from '../../components/Header';
-import {TouchableHighlight} from 'react-native-gesture-handler';
 
 const Landing = () => {
   const {width} = useWindowDimensions();
   const scrollX = useRef(new Animated.Value(0)).current;
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
   const slidesRef = useRef(null);
-  const viewableItemsChanged = useRef(({viewableItems}) => {
-    setCurrentIndex(viewableItems[0]?.index);
-  }).current;
+  // const viewableItemsChanged = useRef(({viewableItems}) => {
+  //   setCurrentIndex(viewableItems[0]?.index);
+  // }).current;
   const viewConfig = useRef({viewAreaCoveragePercentThreshold: 50}).current;
 
   const data = [
     {
       id: '1',
-      image: 'https://placeimg.com/640/640/nature',
+      image:
+        'https://www.rd.com/wp-content/uploads/2020/04/GettyImages-1093840488-5-scaled.jpg',
     },
     {
       id: '2',
       image:
-        'https://sm.mashable.com/mashable_sea/photo/default/gophers-goofing_trax.jpg',
+        'https://www.iucn.org/sites/default/files/content/images/2020/shutterstock_1458128810.jpg',
     },
     {
       id: '3',
@@ -58,8 +55,7 @@ const Landing = () => {
           justifyContent: 'center',
           alignItems: 'center',
           width: width,
-        }}
-      >
+        }}>
         <Image
           source={{uri: item.image}}
           style={{
@@ -75,8 +71,7 @@ const Landing = () => {
             height: 64,
             position: 'absolute',
             bottom: 0,
-          }}
-        >
+          }}>
           {data.map((_, i) => {
             const inputRange = [(i - 1) * width, i * width, (i + 1) * width];
 
@@ -114,18 +109,15 @@ const Landing = () => {
     <View style={{flex: 1}}>
       <ImageBackground
         source={{
-          uri:
-            'https://images.pexels.com/photos/1156684/pexels-photo-1156684.jpeg?cs=srgb&dl=pexels-arun-thomas-1156684.jpg&fm=jpg',
+          uri: 'https://images.pexels.com/photos/1156684/pexels-photo-1156684.jpeg?cs=srgb&dl=pexels-arun-thomas-1156684.jpg&fm=jpg',
         }}
         resizeMode="cover"
-        style={{flex: 1}}
-      >
+        style={{flex: 1}}>
         <Header />
         <View
           style={{
             marginVertical: 150,
-          }}
-        >
+          }}>
           <FlatList
             data={data}
             renderItem={({item}) => <RenderItem item={item} />}
@@ -138,7 +130,6 @@ const Landing = () => {
               [{nativeEvent: {contentOffset: {x: scrollX}}}],
               {useNativeDriver: false},
             )}
-            onViewableItemsChanged={viewableItemsChanged}
             viewabilityConfig={viewConfig}
             ref={slidesRef}
             scrollEventThrottle={32}

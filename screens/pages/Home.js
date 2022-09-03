@@ -6,6 +6,7 @@ import {
   UploadIcon,
   CalculatorIcon,
   DocumentTextIcon,
+  MapIcon,
 } from 'react-native-heroicons/solid';
 import Landing from './Landing';
 import ImageUpload from './ImageUpload';
@@ -43,14 +44,14 @@ const Home = () => {
         component={Location}
         name="LOCATION"
         options={{
-          tabBarIcon: ({color}) => <DocumentTextIcon color={color} size={25} />,
+          tabBarIcon: ({color}) => <MapIcon color={color} size={25} />,
         }}
       />
       <Tab.Screen
         component={JsonData}
         name="JSON DATA"
         options={{
-          tabBarIcon: ({color}) => <CalculatorIcon color={color} size={25} />,
+          tabBarIcon: ({color}) => <DocumentTextIcon color={color} size={25} />,
         }}
       />
       <Tab.Screen

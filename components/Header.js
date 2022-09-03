@@ -1,61 +1,36 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {LogoutIcon} from 'react-native-heroicons/solid';
-import auth from '@react-native-firebase/auth';
 
 const Header = () => {
-  const Logout = () => {
-    auth()
-      .signOut()
-      .then(() => {
-        console.log('signed out');
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
-
   return (
     <View
       style={{
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        // alignItems: 'center',
-        padding: 10,
-        // backgroundColor: '#fff',
-        // elevation: 5,
-      }}>
-      <View
+        justifyContent: 'flex-start',
+        paddingHorizontal: 10,
+        alignItems: 'center',
+        zIndex: 10,
+        backgroundColor: '#fff',
+      }}
+    >
+      <Image
+        source={require('../assets/images/logo.png')}
         style={{
-          backgroundColor: '#fff',
-          elevation: 5,
-          padding: 5,
-        }}>
-        <Image
-          source={require('../assets/images/download.jpeg')}
-          style={{
-            width: 50,
-            height: 50,
-            resizeMode: 'contain',
-          }}
-        />
-      </View>
-      <TouchableOpacity
-        style={{
-          backgroundColor: '#fff',
-          elevation: 5,
-          padding: 5,
-          //   flexDirection: 'row',
-          alignItems: 'center',
-          borderWidth: 1,
-          borderColor: 'red',
+          width: 50,
+          height: 50,
+          resizeMode: 'contain',
         }}
-        activeOpacity={0.5}
-        onPress={Logout}>
-        <LogoutIcon size={20} color={'red'} />
-
-        <Text style={{color: 'red'}}>Logout</Text>
-      </TouchableOpacity>
+      />
+      <Image
+        source={require('../assets/images/Financepeer.png')}
+        style={{
+          width: 80,
+          height: 80,
+          resizeMode: 'contain',
+          marginLeft: 100,
+        }}
+      />
+      {/* </View> */}
     </View>
   );
 };
