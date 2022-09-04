@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, {useContext, useState} from 'react';
+import React from 'react';
 
 import SplashScreen from 'react-native-splash-screen';
 import {AuthProvider} from './context/authContext';

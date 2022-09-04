@@ -1,5 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React, {useContext} from 'react';
+import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {
   HomeIcon,
@@ -24,8 +23,7 @@ const Home = () => {
         backgroundColor: '#000',
       }}
       activeColor="#fff"
-      inactiveColor="#828282"
-    >
+      inactiveColor="#828282">
       <Tab.Screen
         component={Landing}
         name="HOME"
@@ -66,5 +64,3 @@ const Home = () => {
 };
 
 export default Home;
-
-const styles = StyleSheet.create({});

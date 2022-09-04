@@ -1,5 +1,5 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
-import React, {useState, useEffect, useContext} from 'react';
+import {Text, View, TouchableOpacity, Image} from 'react-native';
+import React, {useState} from 'react';
 import {CameraIcon} from 'react-native-heroicons/solid';
 import {launchCamera} from 'react-native-image-picker';
 
@@ -23,7 +23,6 @@ const ImageUpload = () => {
       <View
         style={{
           flex: 1,
-          // justifyContent: 'center',
           alignItems: 'center',
         }}>
         <Image
@@ -84,5 +83,3 @@ const ImageUpload = () => {
 };
 
 export default ImageUpload;
-
-const styles = StyleSheet.create({});

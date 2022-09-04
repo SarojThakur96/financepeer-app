@@ -33,7 +33,6 @@ const Location = () => {
             marginVertical: 10,
             width: '90%',
           }}>
-          {/* <Card.Title title="Your Current Location" /> */}
           <Card.Content
             style={{
               flexDirection: 'row',
@@ -64,17 +63,6 @@ const Location = () => {
             }}
           />
         </Card>
-        {/* <Text style={{color: '#000000', fontSize: 28, marginBottom: 40}}>
-          Current Geolocation
-        </Text>
-        <Text style={{color: 'red', fontSize: 24}}>
-          <Text style={{color: '#000000'}}>Latitude:-</Text>{' '}
-          {CurrentPosition?.latitude}
-        </Text>
-        <Text style={{color: 'red', fontSize: 24}}>
-          <Text style={{color: '#000000'}}>Longitude:-</Text>{' '}
-          {CurrentPosition?.longitude}
-        </Text> */}
       </View>
     </>
   );
