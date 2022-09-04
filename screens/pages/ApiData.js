@@ -27,8 +27,8 @@ const ApiData = () => {
         <Image
           source={require('../../assets/images/Spinner.gif')}
           style={{
-            width: 200,
-            height: 200,
+            width: 160,
+            height: 160,
             resizeMode: 'contain',
             alignSelf: 'center',
             marginVertical: 192,
@@ -47,8 +47,7 @@ const ApiData = () => {
             borderRadius: 5,
             width: '90%',
             borderRadius: 20,
-          }}
-        >
+          }}>
           {data.map((item, index) => (
             <View
               key={index}
@@ -56,14 +55,12 @@ const ApiData = () => {
                 padding: 10,
                 elevation: 3,
                 alignSelf: 'center',
-              }}
-            >
+              }}>
               <Text
                 style={{
                   color: 'red',
                   fontSize: 38,
-                }}
-              >
+                }}>
                 {item}
               </Text>
             </View>
@@ -76,14 +73,12 @@ const ApiData = () => {
           paddingVertical: 20,
           justifyContent: 'flex-end',
           alignItems: 'center',
-        }}
-      >
+        }}>
         <Button
           mode="contained"
           color="#000"
           onPress={callData}
-          style={{borderRadius: 10, width: '80%'}}
-        >
+          style={{borderRadius: 10, width: '80%'}}>
           Call API
         </Button>
       </View>

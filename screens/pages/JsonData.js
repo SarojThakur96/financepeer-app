@@ -25,17 +25,15 @@ const JsonData = () => {
       <ScrollView
         style={{
           marginHorizontal: 10,
-        }}
-      >
+        }}>
         {localData.map(item => (
           <Card
             key={item.id}
             style={{
-              backgroundColor: 'lightgray',
+              backgroundColor: '#fff',
               borderRadius: 20,
               marginVertical: 10,
-            }}
-          >
+            }}>
             <Card.Content>
               <Title>{item.title}</Title>
               <Paragraph>{item.body}</Paragraph>
@@ -50,14 +48,12 @@ const JsonData = () => {
           paddingVertical: 10,
           justifyContent: 'flex-end',
           alignItems: 'center',
-        }}
-      >
+        }}>
         <Button
           mode="contained"
           color="#000"
           style={{borderRadius: 10, width: '95%'}}
-          onPress={saveData}
-        >
+          onPress={saveData}>
           Get Json Data & Save to Local Storage{' '}
         </Button>
       </View>
